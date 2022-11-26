@@ -52,7 +52,8 @@ function addTaskDesc() {
   const lastSection = section[section.length - 1];
 
   const input = lastSection.firstElementChild.value;
-
+  if(input==null || input=="") return;
+  
   lastSection.lastElementChild.innerHTML = input;
 
   lastSection.removeChild(lastSection.firstElementChild);
